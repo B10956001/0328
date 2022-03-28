@@ -37,9 +37,14 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void textBox_listen_port_TextChanged(object sender, EventArgs e)
+        private void button_start_listen_Click(object sender, EventArgs e)
         {
+            Control.CheckForIllegalCrossThreadCalls = false;
+            Th = new Thread(Listen);
 
+            Th.Start();
+
+            button_start_listen.Enabled = false;
         }
     }
 }

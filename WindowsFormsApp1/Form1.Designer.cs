@@ -39,7 +39,7 @@ namespace WindowsFormsApp1
             this.textBox_target_IP = new System.Windows.Forms.TextBox();
             this.textBox_send = new System.Windows.Forms.TextBox();
             this.textBox_target_port = new System.Windows.Forms.TextBox();
-            this.button_start_get = new System.Windows.Forms.Button();
+            this.button_start_listen = new System.Windows.Forms.Button();
             this.button_send = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -69,7 +69,6 @@ namespace WindowsFormsApp1
             this.textBox_listen_port.Name = "textBox_listen_port";
             this.textBox_listen_port.Size = new System.Drawing.Size(100, 22);
             this.textBox_listen_port.TabIndex = 2;
-            this.textBox_listen_port.TextChanged += new System.EventHandler(this.textBox_listen_port_TextChanged);
             // 
             // textBox_recive_msg
             // 
@@ -129,16 +128,17 @@ namespace WindowsFormsApp1
             this.textBox_target_port.Size = new System.Drawing.Size(100, 22);
             this.textBox_target_port.TabIndex = 9;
             // 
-            // button_start_get
+            // button_start_listen
             // 
-            this.button_start_get.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button_start_get.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button_start_get.Location = new System.Drawing.Point(601, 140);
-            this.button_start_get.Name = "button_start_get";
-            this.button_start_get.Size = new System.Drawing.Size(103, 24);
-            this.button_start_get.TabIndex = 10;
-            this.button_start_get.Text = "啟動接收";
-            this.button_start_get.UseVisualStyleBackColor = true;
+            this.button_start_listen.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button_start_listen.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button_start_listen.Location = new System.Drawing.Point(601, 140);
+            this.button_start_listen.Name = "button_start_listen";
+            this.button_start_listen.Size = new System.Drawing.Size(103, 24);
+            this.button_start_listen.TabIndex = 10;
+            this.button_start_listen.Text = "啟動接收";
+            this.button_start_listen.UseVisualStyleBackColor = true;
+            this.button_start_listen.Click += new System.EventHandler(this.button_start_listen_Click);
             // 
             // button_send
             // 
@@ -157,7 +157,7 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button_send);
-            this.Controls.Add(this.button_start_get);
+            this.Controls.Add(this.button_start_listen);
             this.Controls.Add(this.textBox_target_port);
             this.Controls.Add(this.textBox_send);
             this.Controls.Add(this.textBox_target_IP);
@@ -187,7 +187,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox textBox_target_IP;
         private System.Windows.Forms.TextBox textBox_send;
         private System.Windows.Forms.TextBox textBox_target_port;
-        private System.Windows.Forms.Button button_start_get;
+        private System.Windows.Forms.Button button_start_listen;
         private System.Windows.Forms.Button button_send;
     }
 }
