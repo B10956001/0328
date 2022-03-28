@@ -37,10 +37,10 @@ namespace WindowsFormsApp1
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox_target_IP = new System.Windows.Forms.TextBox();
-            this.textBox_send = new System.Windows.Forms.TextBox();
-            this.textBox_target_port = new System.Windows.Forms.TextBox();
             this.button_start_listen = new System.Windows.Forms.Button();
             this.button_send = new System.Windows.Forms.Button();
+            this.textBox_target_port = new System.Windows.Forms.TextBox();
+            this.textBox_send = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -111,22 +111,8 @@ namespace WindowsFormsApp1
             // 
             this.textBox_target_IP.Location = new System.Drawing.Point(180, 245);
             this.textBox_target_IP.Name = "textBox_target_IP";
-            this.textBox_target_IP.Size = new System.Drawing.Size(100, 22);
+            this.textBox_target_IP.Size = new System.Drawing.Size(126, 22);
             this.textBox_target_IP.TabIndex = 7;
-            // 
-            // textBox_send
-            // 
-            this.textBox_send.Location = new System.Drawing.Point(180, 326);
-            this.textBox_send.Name = "textBox_send";
-            this.textBox_send.Size = new System.Drawing.Size(309, 22);
-            this.textBox_send.TabIndex = 8;
-            // 
-            // textBox_target_port
-            // 
-            this.textBox_target_port.Location = new System.Drawing.Point(180, 284);
-            this.textBox_target_port.Name = "textBox_target_port";
-            this.textBox_target_port.Size = new System.Drawing.Size(100, 22);
-            this.textBox_target_port.TabIndex = 9;
             // 
             // button_start_listen
             // 
@@ -152,15 +138,29 @@ namespace WindowsFormsApp1
             this.button_send.UseVisualStyleBackColor = true;
             this.button_send.Click += new System.EventHandler(this.button_send_Click);
             // 
+            // textBox_target_port
+            // 
+            this.textBox_target_port.Location = new System.Drawing.Point(180, 284);
+            this.textBox_target_port.Name = "textBox_target_port";
+            this.textBox_target_port.Size = new System.Drawing.Size(100, 22);
+            this.textBox_target_port.TabIndex = 12;
+            // 
+            // textBox_send
+            // 
+            this.textBox_send.Location = new System.Drawing.Point(180, 326);
+            this.textBox_send.Name = "textBox_send";
+            this.textBox_send.Size = new System.Drawing.Size(309, 22);
+            this.textBox_send.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox_send);
+            this.Controls.Add(this.textBox_target_port);
             this.Controls.Add(this.button_send);
             this.Controls.Add(this.button_start_listen);
-            this.Controls.Add(this.textBox_target_port);
-            this.Controls.Add(this.textBox_send);
             this.Controls.Add(this.textBox_target_IP);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -187,10 +187,10 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox_target_IP;
-        private System.Windows.Forms.TextBox textBox_send;
-        private System.Windows.Forms.TextBox textBox_target_port;
         private System.Windows.Forms.Button button_start_listen;
         private System.Windows.Forms.Button button_send;
+        private System.Windows.Forms.TextBox textBox_target_port;
+        private System.Windows.Forms.TextBox textBox_send;
     }
 }
 
