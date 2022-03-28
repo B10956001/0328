@@ -74,6 +74,7 @@ namespace WindowsFormsApp1
             // 
             this.textBox_recive_msg.Location = new System.Drawing.Point(180, 142);
             this.textBox_recive_msg.Name = "textBox_recive_msg";
+            this.textBox_recive_msg.ReadOnly = true;
             this.textBox_recive_msg.Size = new System.Drawing.Size(309, 22);
             this.textBox_recive_msg.TabIndex = 3;
             // 
