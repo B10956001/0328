@@ -49,13 +49,23 @@ namespace WindowsFormsApp1
         {
             try
             {
-                Th.Abort();
-                U.Close();
+                Th.Abort(); //關閉監聽執行續
+                U.Close(); //關閉監聽器
             }
             catch
             {
-
+                //忽略錯誤
             }
+        }
+
+        private void button_send_Click(object sender, EventArgs e)
+        {
+            string IP = textBox_target_IP.Text;
+            int Port = int.Parse(textBox_target_port.Text);
+            byte[] B = Encoding.Default.GetBytes(textBox_send.Text);
+            UdpClient S = new UdpClient();
+            S.Send(B, B.Length, IP, Port);
+            S.Close();
         }
     }
 }

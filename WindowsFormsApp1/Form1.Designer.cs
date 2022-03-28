@@ -150,6 +150,7 @@ namespace WindowsFormsApp1
             this.button_send.TabIndex = 11;
             this.button_send.Text = "傳送";
             this.button_send.UseVisualStyleBackColor = true;
+            this.button_send.Click += new System.EventHandler(this.button_send_Click);
             // 
             // Form1
             // 
